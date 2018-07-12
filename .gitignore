@@ -1,0 +1,5 @@
+# Node Modules
+node_modules/
+
+# Database access files
+database/pw.js

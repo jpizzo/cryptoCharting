@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "npx webpack --watch",
+    "run-devserver": "webpack-dev-server --open",
+    "run-server": "node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,22 @@
   "bugs": {
     "url": "https://github.com/jpizzo/cryptoCharting/issues"
   },
-  "homepage": "https://github.com/jpizzo/cryptoCharting#readme"
+  "homepage": "https://github.com/jpizzo/cryptoCharting#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.3",
+    "node": "^10.6.0",
+    "pg": "^7.4.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
 }
