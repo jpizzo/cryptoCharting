@@ -9,5 +9,3 @@ const config = {
   port: 5432
 }
 const client = new pg.Client(config);
-
-console.log(client)

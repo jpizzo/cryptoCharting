@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-dev": "npx webpack --watch",
-    "run-devserver": "webpack-dev-server --open",
-    "run-server": "node server/index.js"
+    "build-dev": "npx webpack --watch --config webpack.config.js",
+    "server-dev": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/jpizzo/cryptoCharting#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
