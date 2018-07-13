@@ -1,8 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
-//labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-
 
 class BtcChart extends React.Component {
   constructor(props) {
@@ -17,7 +15,7 @@ class BtcChart extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.btcData !== prevProps.btcData) {
       this.setState({
-        data: this.state.data.concat(this.props.btcData),
+        data: this.props.btcData,
         dataObj: this.createData(this.props.btcData) 
       })
     }

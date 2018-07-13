@@ -12,16 +12,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getCoindeskData();
-    // let x = 10
-    // while( x > 0){
-    //   this.getCoindeskData()
-    //   x -= 1;
-    // }
-    // this.timerId = setInterval(() => {
-    //   this.getCoindeskData()
-    // }, 1000);
-
+    this.timerId = setInterval(() => {
+      this.getCoindeskData()
+    }, 2000);
   }
 
   componentWillunmount() {
@@ -32,7 +25,7 @@ class App extends React.Component {
     axios.get('/btcdata')
     .then((response) => {
       this.setState({
-        data: this.state.data.concat([response.data.bpi['USD'].rate])
+        data: this.state.data.concat([response.data.bpi['USD'].rate_float])
       })
     })
     .catch((error) => {
